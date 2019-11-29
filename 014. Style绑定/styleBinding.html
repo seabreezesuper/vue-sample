@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="vue.js"></script>
+
+<title>Hello World!</title>
+</head>
+<body>
+
+<div id="app14"
+  v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"
+>此段文字的Style可动态改变！</div>
+
+<script>
+var vm = new Vue({
+  el: '#app14',
+  data: {
+    activeColor: 'blue',
+    fontSize: 48
+  }
+})
+</script>
+
+</body>
+</html>

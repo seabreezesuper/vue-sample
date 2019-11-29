@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="vue.js"></script>
+
+<title>Hello World!</title>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="say('hi')">Say hi</button>
+    <button v-on:click="say('what')">Say what</button>
+    <button v-on:keydown.p="warn('Form cannot be submitted yet.', $event)">
+         Submit
+    </button>
+</div>
+
+<script>
+var app = new Vue({ 
+  el: "#app", 
+  methods: { 
+      say: function (message) { 
+          alert(message) 
+      }, 
+      warn: function (message, event) { // 现在我们可以访问原生事件对象 
+//          if (event.keyCode == 13){
+//              alert("按下了Enter键！");
+//          }
+          alert(message) 
+      } 
+  } 
+})
+</script>
+
+</body>
+</html>

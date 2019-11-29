@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="vue.js"></script>
+
+<title>Hello World!</title>
+</head>
+<body>
+
+<div id="myel">
+<input v-model="a" />
+</div>
+
+<script>
+
+var el = 5;
+
+var vm = new Vue({
+  el:"#myel",
+  data: {
+    a: 1
+  },
+  created: function () {
+    // `this` 指向 vm 实例
+    console.log('a is: ' + this.a)
+  },
+  mounted: function () {
+    // 把el对应的页面组件加载至vue实例中，好进行控制
+    console.log('el is: ' + this.$el.outerHTML)
+  },
+  updated: function () {
+    console.log('data被更新！')
+  },
+  destroyed: function () {
+    console.log('vue实例被销毁！') // 测试方法：在console中输入“vm.$destroy();”
+  },
+})
+
+</script>
+
+</body>
+</html>

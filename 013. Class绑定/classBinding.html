@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="vue.js"></script>
+
+<style type="text/css">
+.font24 {font-size: 24}
+.fontWeight {font-weight: bold}
+.text-danger {color: #a94442}
+</style>
+
+<title>Hello World!</title>
+</head>
+<body>
+
+<div id="app13"
+  class="font24"
+  v-bind:class="{ fontWeight: isActive, 'text-danger': hasError }"
+>此段文字的Class可动态改变！</div>
+
+<script>
+var vm = new Vue({
+  el: '#app13',
+  data: {
+    isActive: false,
+    hasError: false
+  }
+})
+
+vm.hasError=true;
+
+</script>
+
+</body>
+</html>

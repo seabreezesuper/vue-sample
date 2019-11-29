@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="vue.js"></script>
+
+<title>Hello World!</title>
+</head>
+<body>
+
+<div id="app10">
+  <p>按字符串输出：{{ rawHtml }}</p>
+  <p>按原始HTML输出：<span v-html="rawHtml"></span></p>
+</div>
+
+<script>
+var app = new Vue({
+  el: '#app10',
+  data: {
+    rawHtml: 'I\'m <span style="color:red">SUPERMAN</span>!'
+  }
+})
+</script>
+
+</body>
+</html>

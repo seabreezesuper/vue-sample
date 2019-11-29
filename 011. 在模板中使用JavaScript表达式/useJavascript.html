@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="vue.js"></script>
+
+<title>Hello World!</title>
+</head>
+<body>
+
+<div id="app11">
+   *注意：表达式不是语句！<br><br>
+
+  {{ number + 1 }}<br>
+
+  {{ ok ? 'YES' : 'NO' }}<br>
+
+  {{ message.split('').reverse().join('') }}<br>
+
+  <div v-bind:id="'list-' + id">此DIV的id会变</div>
+
+</div>
+
+<script>
+var app = new Vue({
+  el: '#app11',
+  data: {
+    number: 10,
+    ok: true,
+    message: 'Words',
+    id: 1
+  }
+})
+
+alert(document.getElementById('list-1').innerHTML);
+
+</script>
+
+</body>
+</html>
